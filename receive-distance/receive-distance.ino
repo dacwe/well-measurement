@@ -261,7 +261,7 @@ void setup()
     request->send(200, "application/json", jsonString);
   });
 
-  server.on("/config/store", HTTP_GET, [](AsyncWebServerRequest *request){
+  server.on("/store", HTTP_GET, [](AsyncWebServerRequest *request){
     if (request->hasParam("ssid")) {
       Serial.println("got ssid");
       writeStringToEEPROM(
